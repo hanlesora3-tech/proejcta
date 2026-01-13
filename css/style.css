@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url(my-reset.css);
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  height: 100vh;
+  /* 백그라운드에는 아래처럼 배경을 두가지 넣을 수 있음 */
+  /* 백그라운드에 rgba를 두개 넣는 이유는 그라디언트이기 때문 */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(../images/header-bg.jpg) center no-repeat; /*  center는 XY축 중앙정렬 */
+  background-size: cover;
+  padding: 10px 8%; /* 상하 10px 위아래 8% */
+  position: relative;
+}
+nav {
+  display: flex; /* 자식요소들 옆으로 배치 */
+  justify-content: space-between; /* 자식들이 첫과 끝은 정해져있고, 나머지는 균등배치하라는 뜻 */
+  align-items: center; /* 수직 중앙정렬. 근데 이건 높이가 없어서 주나마나*/
+  padding: 10px 0;
+}
+nav .logo a {
+  font-size: 32px;
+  font-weight: 800;
+  color: #db0001;
+}
+nav button {
+  border: 1px solid #db0001;
+  background: #db0001;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 24px; /* 값을 넣으면 사이즈가 저절로 커짐 */
+  margin: 10px; /* 버튼과 버튼 사이즈 값 */
+  cursor: pointer;
+}
+.lang {
+  display: inline-flex; /* 아이템박스에 사용할 수 있는 정렬옵션하용하고자 */
+  align-items: center; /* 수직 중앙 정렬 */
+  border: 1px solid #fff;
+  background: transparent;
+  column-gap: 4px; /* 각각의 요소. 즉 아이콘과 글씨 사이의 갭 */
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 화면사이즈 변경시에도 위치값 깨지지말고 고정시키는 것 */
+  text-align: center;
+}
+
+.header-content h2 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.4; /* 글씨 중앙부터 계산되는 것 */
+  letter-spacing: -0.5px;
+  max-width: 650px;
+
+  margin-bottom: 20px;
+  white-space: nowrap; /* 글씨 줄바꿈하지 않을 때 */
+}
+.header-content h3 {
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.header-content .add-email {
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.header-content .add-email input {
+  border: 0;
+  outline: 0;
+  flex: 1;
+  margin-left: 20px;
+}
+.header-content .add-email button {
+  border: 0;
+  background-color: #db0001;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 30px;
+  /* width 대신 padding으로 주는게 정렬이 편함
+  width:300px;
+  height:50px; */
+  cursor: pointer;
+}

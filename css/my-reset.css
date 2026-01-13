@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*{
+   box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  color: #666;
+  line-height: 1.75;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif; /* 이렇게 적는건 pretendard 폰트가 없으면 sans-serif(고딕체) 아무거나 */
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+*{
+   box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  color: #666;
+  line-height: 1.75;
+  font-size: 16px;
+  font-family: 'Pretendard', sans-serif; /* 이렇게 적는건 pretendard 폰트가 없으면 sans-serif(고딕체) 아무거나 */
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
