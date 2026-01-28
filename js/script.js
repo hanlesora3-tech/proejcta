@@ -503,3 +503,27 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+/* ========================================
+   Popup 로직
+   ======================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const popupOverlay = document.getElementById('popup-overlay');
+    const popupCloseBtn = document.getElementById('popup-close');
+
+    if (popupOverlay && popupCloseBtn) {
+        // 페이지 로드 시 팝업 보이기
+        popupOverlay.style.display = 'flex';
+
+        // 닫기 버튼 클릭 시 팝업 숨기기
+        popupCloseBtn.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+
+        // 팝업 외부 클릭 시 숨기기 (선택 사항)
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
+    }
+});
